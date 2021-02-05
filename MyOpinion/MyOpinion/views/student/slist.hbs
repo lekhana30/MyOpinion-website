@@ -1,0 +1,28 @@
+
+    <button><a  href="/student"><i class="fas fa-plus-square"></i>New Feedback</a></button><br>
+    <h4>FEEDBACKS</h4>
+    
+    <table >
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>USN         </th>
+                <th>Course Title</th>
+                <th>Feedback    </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each list}}
+            <tr>
+                <td>{{this.StudentName}}</td>
+                <td>{{this.USN        }}</td>
+                <td>{{this.CourseTitle}}</td>
+                <td>{{this.Feedback   }}</td>
+                <td>
+               <a href="/student/{{this._id}}" onclick="return confirm('Are you sure to delete this feedback ?');"><i class="fas fa-trash"></i></a>
+                </td> 
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>

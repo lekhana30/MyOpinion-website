@@ -1,0 +1,27 @@
+
+   <button><a href="/teacher"><i class="fas fa-plus-square"></i>New Feedback</a></button> 
+   <h4>Feedbacks</h4>
+    <table >
+        <thead>
+            <tr>
+                <th>Teachers Name</th>
+                <th>Department</th>
+                <th>Course Title</th>
+                <th>Feedback</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each list}}
+            <tr>
+                <td>{{this.TeachersName}}</td>
+                <td>{{this.Department}}</td>
+                <td>{{this.CourseTitle}}</td>
+                <td>{{this.Feedback}}</td>
+                <td>
+              <a href="/teacher/{{this._id}}" onclick="return confirm('Are you sure to delete this feedback?');"><i class="fas fa-trash"></i></a>
+                </td>  
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>

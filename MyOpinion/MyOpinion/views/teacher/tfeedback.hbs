@@ -1,0 +1,27 @@
+ <h3><i class="fas fa-book"></i>{{viewTitle}}</h3>
+
+    <form action="/teacher" method="POST" autocomplete="off">
+        <input type="hidden" name="_id" value="{{teacher._id}}">
+        <div >
+            <label>Teachers Name:</label><br>
+            <input type="text"  name="TeachersName" placeholder="Teachers Name" value="{{teacher.TeachersName}}">
+        </div>
+        <div >
+            <label>Department:</label><br>
+            <input type="text" name="Department" placeholder="Department" value="{{teacher.Department}}">
+        </div>
+        
+            <div >
+                <label>Course Title:</label><br>
+                <input type="text"  name="CourseTitle" placeholder="CourseTitle" value="{{student.CourseTitle}}">
+            
+        </div>
+            <div >
+                <label>Feedback:</label><br>
+                <input type="text"  name="Feedback" placeholder="Feedback" value="{{student.Feedback}}">
+            </div>
+        <div >
+            <button type="submit" onclick="return confirm('Make sure you have filled all the details!!');"> <i class="fas fa-arrow-up"></i>Submit</button>
+           <button> <a  href="teacher/tlist"><i class="fas fa-list"></i> View All</a></button>
+        </div>
+    </form>
